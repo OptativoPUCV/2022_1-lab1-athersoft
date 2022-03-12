@@ -147,3 +147,15 @@ c:\mingw\include\stdlib.h:484:40: note: declared here
                                         ^~~~~~
 Compilation failed
 1938aab
+Sat Mar 12 12:17:56 HSP 2022: 
+In file included from test.c:5:0:
+exercises.c: In function 'crearVector':
+exercises.c:82:24: error: too few arguments to function 'calloc'
+    vector = (Vector *) calloc(sizeof(Vector));
+                        ^~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:484:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *calloc (size_t, size_t) __MINGW_ATTRIB_MALLOC;
+                                        ^~~~~~
+Compilation failed
+466b9f5
