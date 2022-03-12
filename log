@@ -133,3 +133,17 @@ exercises.c:82:20: error: 'vector' is used uninitialized in this function [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e2f7b92
+Sat Mar 12 12:14:12 HSP 2022: 
+ exercises.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crearVector':
+exercises.c:82:24: error: too few arguments to function 'calloc'
+    vector = (Vector *) calloc(sizeof(Vector));
+                        ^~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:484:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  void *calloc (size_t, size_t) __MINGW_ATTRIB_MALLOC;
+                                        ^~~~~~
+Compilation failed
+1938aab
