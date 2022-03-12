@@ -12,8 +12,8 @@ y en c almacena el valor de la suma de a más b.
 */
 
 void suma(int a, int b, int * c) {
-    
-
+    *c = a+b;
+}
 /*
 Esta función suma los N primeros números del arreglo a
 */
@@ -36,7 +36,10 @@ Utilice la función sumaN.
 */
 
 void sumaNultimos(int a[], int n, int m, int * suma) {
-
+   *suma = sumaN(a, n);
+   for(int i = 0; i < n-m; i++){
+      *suma -= a[i];
+   }
 }
 
 /*
@@ -54,7 +57,11 @@ typedef struct {
 
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
-   return NULL;
+   Persona *persona = malloc(sizeof(Persona));
+   strcpy((*persona).nombre, rut);
+   strcpy((*persona).rut, rut);
+   (*persona).edad = edad;
+   return persona;
 }
 
 /*
@@ -71,7 +78,9 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+   Vector *vector;
+   (*vector).datos = calloc(n,sizeof(int));
+   return (*vector).datos;
 }
 
 /*
@@ -80,7 +89,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-
+   (*v).datos[i] = valor;
 }
 
 /*
@@ -89,7 +98,8 @@ Programe la función int obtenerValor(Vector * v, int i),
 la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
-   return 0;
+   int valor = (*v).datos[i];
+   return valor;
 }
 
 /*
@@ -98,7 +108,9 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-
+   for(int i = 0; i<(*a).capacidad; i++){
+      (*c).datos[i] = (*a).datos[i]+(*b).datos[i];
+   }
 }
 
 /*

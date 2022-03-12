@@ -1,1 +1,7 @@
 
+Sat Mar 12 11:38:11 HSP 2022: 
+ exercises.c | 28 ++++++++++++++++++++--------
+ 1 file changed, 20 insertions(+), 8 deletions(-)
+./test.sh: line 26: gcc: command not found
+Compilation failed
+65771b6
